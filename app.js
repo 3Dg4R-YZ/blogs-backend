@@ -11,6 +11,9 @@ const usersRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 const app = express()
 
+config.MONGODB_URI =
+  'mongodb+srv://fullstack:fullstack@cluster0.mswpk.mongodb.net/blogs?retryWrites=true&w=majority'
+
 logger.info('connecting to', config.MONGODB_URI)
 
 mongoose.set('strictQuery', false)
